@@ -1,12 +1,10 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-mealCost = 12
-tipPercent = 20
-taxPercent = 8
+meal_price = gets.strip.to_f
+tip_percent = gets.strip.to_i
+tax_percent = gets.strip.to_i
 
-tip = mealCost * (tipPercent/100)
-tax = mealCost * (taxPercent/100)
-totalCost = mealCost + tip + tax
+tip = meal_price * tip_percent / 100
+tax = meal_price * tax_percent / 100
+total_cost = meal_price + tip + tax
 
-s = "𝚃𝚑𝚎 𝚝𝚘𝚝𝚊𝚕 𝚖𝚎𝚊𝚕 𝚌𝚘𝚜𝚝 𝚒𝚜 𝚝𝚘𝚝𝚊𝚕𝙲𝚘𝚜𝚝 𝚍𝚘𝚕𝚕𝚊𝚛𝚜"
-
-puts "#{s}" + "= " + totalCost.to_s
+$stdout.print "The total meal cost is " + total_cost.round(0).to_s + " dollars."
